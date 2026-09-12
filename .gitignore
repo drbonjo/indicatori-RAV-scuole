@@ -50,8 +50,9 @@ output/
 # TEMPLATE ESTRATTI DA DATI REALI
 # ============================================================
 
-templates/*
-!templates/.gitkeep
+_*/**
+!_*/.gitkeep
+
 
 # ============================================================
 # CODICE / CONFIGURAZIONE PRIVATA
@@ -59,22 +60,15 @@ templates/*
 
 script_py/data_extraction/
 
-requirements-private.txt
-
 .env
 .env.*
-
+token.txt
 
 # ============================================================
 # LOG
 # ============================================================
 
 *.log
-
-
-# ============================================================
-# SISTEMA OPERATIVO
-# ============================================================
 
 Thumbs.db
 Desktop.ini
@@ -90,4 +84,3 @@ Desktop.ini
 .spyproject/
 .spyderproject
 
-token.txt
