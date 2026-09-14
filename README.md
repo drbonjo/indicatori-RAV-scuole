@@ -45,7 +45,7 @@ Ogni record ha la seguente struttura.
 
 In questa directory verranno salvati gli script prodotti.
 
-* parsers: directory di destinazione dei singoli parser. I parser vengono scritti per ogni descrittore da estrarre. È ammesso che producano file dati con strutture diverse. 
+* parsers: directory di destinazione dei singoli parser. I parser vengono scritti per ogni descrittore da estrarre. È ammesso che producano file dati con strutture diverse, ma devono necessariamente contenere una tra due chiavi univoche: il codice meccanografico identificativo dell'autonomia scolastica (solitamente:  "codice istituto di riferimento"), o il codice meccanografico identificativo del singolo plesso ("codice scuola"). 
 
 * assembler: script di gestione del parsing e del trattamento dati prodotti. 
 
