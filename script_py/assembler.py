@@ -11,7 +11,7 @@ import os
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 os.chdir(ROOT_DIR)
-DATA_DIR = ROOT_DIR / "data_1"
+DATA_DIR = ROOT_DIR / "_input"
 
 from script_py.parsers.parser_21a1 import *
 from script_py.parsers.parser_21a2 import *

@@ -20,15 +20,14 @@ import json
 import webbrowser
 import tkinter as tk
 from tkinter import ttk, messagebox
-
+import os
 
 # ==============================================================
 # CONFIGURAZIONE
 # ==============================================================
 
-ROOT_DIR = Path(
-    r"C:\Users\imore\Dropbox\Dati RAV scuole"
-)
+ROOT_DIR = Path(__file__).resolve().parents[1]
+os.chdir(ROOT_DIR)
 
 # ==============================================================
 # LETTURA JSONL
@@ -245,7 +244,7 @@ def safe_template_filename_piece(value):
 
 def save_html_template(record, templates_dir=None):
     """
-    Salva il codice HTML grezzo del record in ROOT_DIR/templates.
+    Salva il codice HTML grezzo del record in ROOT_DIR/_templates. (contenuto in .gitignore)
 
     Il nome file è:
         CODICESCUOLA_DESCRITTORE.txt
@@ -278,7 +277,7 @@ def save_html_template(record, templates_dir=None):
     descrittore = record.get("descrittore", "descrittore")
 
     if templates_dir is None:
-        templates_dir = ROOT_DIR / "templates"
+        templates_dir = ROOT_DIR / "_templates"
     else:
         templates_dir = Path(templates_dir)
 
@@ -942,7 +941,7 @@ class RendererApp:
         try:
             output_path = save_html_template(
                 item["record"],
-                ROOT_DIR / "templates"
+                ROOT_DIR / "_templates"
             )
 
             self.info_var.set(
